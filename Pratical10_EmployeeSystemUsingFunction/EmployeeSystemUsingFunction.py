@@ -1,0 +1,38 @@
+
+
+def employee(*X):
+    
+    print("\n")
+    print("SALARY SLIP".center(50,"*"))
+
+    print("\tCompany Name  :", X[0])
+    print("\tEmployee Name :", X[1])
+    print("\tEmployee Id   :", X[2])
+    print("\tPosition      :", X[3])
+    print("\tMobile        :", X[4])
+    print("\tEmail Id      :", X[5])
+    print("\tAddress       :", X[6])
+    print("SALARY DETAILS".center(50, "*"))
+    print("\tTA            :", TA)
+    print("\tDA            :", DA)
+    print("\tHRA           :", HRA)
+    print("\tPF            :", PF)
+    print("\tSalary        :", X[7])
+    print("-"*50)
+    print("\tTotal Salary  :", Total)
+    print("-"*50)
+
+Company = input("Enter your company name : ")
+Name = input("Enter your Name : ")
+Id = input("Enter your ID : ")
+Position = input("Enter your Position : ")
+Mobile = int(input("Enter your Mobile Number : "))
+Address = input("Enter your Address : ")
+Email_Id = input("Enter your Email Id : ")
+Salary = int(input("Enter your Salary : "))
+TA = (0.02 * Salary)  
+DA = (0.05 * Salary)  
+HRA = (0.2 * Salary)  
+PF = (0.18 * Salary)  
+Total = int(Salary + TA + DA + HRA - PF)
+employee(Company, Name, Id, Position, Mobile, Address, Email_Id, Salary)
